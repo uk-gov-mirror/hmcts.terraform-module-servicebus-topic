@@ -16,15 +16,15 @@ resource "azurerm_servicebus_topic" "servicebus_topic" {
   name         = var.name
   namespace_id = data.azurerm_servicebus_namespace.this.id
 
-  enable_partitioning                     = var.enable_partitioning
+  partitioning_enabled                    = var.enable_partitioning
   default_message_ttl                     = var.default_message_ttl
   max_size_in_megabytes                   = var.max_size_in_megabytes
   requires_duplicate_detection            = var.requires_duplicate_detection
   duplicate_detection_history_time_window = var.duplicate_detection_history_time_window
-  enable_batched_operations               = var.enable_batched_operations
+  batched_operations_enabled              = var.enable_batched_operations
   support_ordering                        = var.support_ordering
   auto_delete_on_idle                     = var.auto_delete_on_idle
-  enable_express                          = var.enable_express
+  express_enabled                         = var.enable_express
   max_message_size_in_kilobytes           = var.max_message_size_in_kilobytes
 }
 
