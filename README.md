@@ -11,7 +11,7 @@ The following example shows how to use the module to create an Azure Service Bus
 
 ```terraform
 module "servicebus-topic" {
-  source                = "git@github.com:hmcts/terraform-module-servicebus-topic?ref=master"
+  source                = "git@github.com:hmcts/terraform-module-servicebus-topic?ref=4.x"
   name                  = "your-topic"
   namespace_name        = module.servicebus-namespace.name
   resource_group_name   = azurerm_resource_group.rg.name
@@ -44,7 +44,7 @@ The following example shows how to give read access to a user assigned managed i
 
 ```terraform
 module "servicebus-topic" {
-  source                     = "git@github.com:hmcts/terraform-module-servicebus-topic?ref=master"
+  source                     = "git@github.com:hmcts/terraform-module-servicebus-topic?ref=4.x"
   name                       = "your-topic"
   namespace_name             = module.servicebus-namespace.name
   resource_group_name        = azurerm_resource_group.rg.name
