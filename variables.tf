@@ -77,3 +77,9 @@ variable "managed_identity_object_id" {
   default     = null
   description = "the object id of the managed identity - can be retrieved with az identity show --name <identity-name>-sandbox-mi -g managed-identities-<env>-rg --subscription DCD-CFTAPPS-<env> --query principalId -o tsv"
 }
+
+variable "principal_type" {
+  type        = string
+  description = "The principal type that the role will be assigned to"
+  default     = null
+}
